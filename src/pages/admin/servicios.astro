@@ -1,0 +1,66 @@
+---
+import FeaturesCard from "@components/FeaturesCard.astro";
+import Layout from "@layouts/Layout.astro";
+import ColumnsLayout from "@layouts/ColumnsLayout.astro";
+import Section from "@components/Section.astro";
+import Supademo from "@components/Supademo";
+---
+
+<Layout title='Servicios'>
+  <ColumnsLayout>
+      <Section>
+        <h1>Servicios</h1>
+        <p>
+          El apartado de Servicios permite la gestión completa de todas las actividades o labores
+          que la empresa ofrece a sus clientes, diferenciándose de los productos físicos. Esto es
+          particularmente útil para empresas que brindan consultorías, soporte técnico,
+          reparaciones, entre otros.
+        </p>
+        <FeaturesCard title="Funciones principales">
+          <li><p>Registro detallado</p></li>
+          <li><p>Precios y costos</p></li>
+          <li><p>Organización por catálogo</p></li>
+          <li><p>Estado actual de servicios</p></li>
+        </FeaturesCard>
+        <p>
+          Este módulo facilita la organización y control de los servicios ofrecidos, mejorando la
+          eficiencia en la gestión y asegurando que se cumplan los detalles y condiciones acordadas
+          con los clientes.
+        </p>
+      </Section>
+
+      <Section id="categorias">
+        <h2>Categorías</h2>
+        <p>
+          Permite organizar los servicios en grupos según su naturaleza o tipo de actividad, lo que
+          facilita la administración, el seguimiento y la generación de reportes. Esta clasificación
+          es clave para optimizar el manejo de los servicios en el sistema.
+        </p>
+        <p>
+          También se puede gestionar el control de inventario y recursos mediante la vinculación de
+          categorías de servicios a recursos específicos (como personal o herramientas), lo que optimiza
+          la planificación y asignación de recursos necesarios para cada servicio.
+        </p>
+        <Supademo title="¿Cómo agregar categorías?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 2.0919220055710306; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm2t8apaf15iaesgv7tnw04ti?embed_v=2" loading="eager" title="Servicios - Categorías" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="catalogo">
+        <h2>Catálogo de servicios</h2>
+        <p>
+          Facilita visualizar, gestionar y actualizar toda la información sobre los servicios que ofrece
+          la empresa. Permite habilitar y deshabilitar servicios, lo que permite mostrar únicamente los
+          servicios disponibles en el momento de registrar ventas.
+        </p>
+        <p>
+          Muestra una lista detallada con precios, descripciones, categorías e impuestos, y la edición y
+          gestión, que permite a los administradores agregar o modificar servicios fácilmente, como ajustar
+          precios o descripciones.
+        </p>
+        <Supademo title="¿Cómo organizar el catálogo?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 2.0919220055710306; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm2tacdyf14vjgyttt5f07ufw?embed_v=2" loading="lazy" title="Servicios - Catálogo" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+  </ColumnsLayout>
+</Layout>

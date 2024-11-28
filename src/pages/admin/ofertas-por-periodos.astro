@@ -1,0 +1,41 @@
+---
+import FeaturesCard from "@components/FeaturesCard.astro";
+import Layout from "@layouts/Layout.astro";
+import ColumnsLayout from "@layouts/ColumnsLayout.astro";
+import Section from "@components/Section.astro";
+import Supademo from "@components/Supademo";
+---
+
+<Layout title='Ofertas por períodos'>
+  <ColumnsLayout>
+      <Section>
+        <h1>Ofertas por períodos</h1>
+        <p>
+          Permite agregar promociones especiales a categorías completas del inventario o
+          productos específicos dentro de las sucursales. Estas ofertas pueden configurarse
+          con fechas y criterios personalizados para optimizar las ventas durante períodos
+          clave.
+        </p>
+        <FeaturesCard title="Funcionalidades">
+          <li><p>Descuentos por categorías</p></li>
+          <li><p>Ofertas en cada producto</p></li>
+          <li><p>Promociones con fechas personalizadas</p></li>
+        </FeaturesCard>
+        <p>
+          Ofrece la flexibilidad de aplicar descuentos generales o específicos de acuerdo
+          a la época o necesidades del negocio.
+        </p>
+      </Section>
+
+      <Section id="nueva-oferta">
+        <h2>Nueva oferta</h2>
+        <p>
+          Crea promociones especificando el alcance de la oferta, el porcentaje de descuento,
+          la duración y cualquier descripción que detalle la oferta a incluir.
+        </p>
+        <Supademo title="¿Cómo añadir una nueva oferta?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm3ywtl580fhy10a54eg5p7dl?embed_v=2" loading="lazy" title="Ofertas por períodos" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+  </ColumnsLayout>
+</Layout>

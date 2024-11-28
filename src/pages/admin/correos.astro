@@ -1,0 +1,38 @@
+---
+import FeaturesCard from "@components/FeaturesCard.astro";
+import Layout from "@layouts/Layout.astro";
+import ColumnsLayout from "@layouts/ColumnsLayout.astro";
+import Section from "@components/Section.astro";
+import Supademo from "@components/Supademo";
+---
+
+<Layout title='Correos'>
+  <ColumnsLayout>
+      <Section>
+        <h1>Correos</h1>
+        <p>
+          Diseñado para gestionar la comunicación por correo electrónico entre la empresa y sus
+          clientes. Este módulo permite automatizar, organizar y personalizar los envíos de correos
+          relacionados con la facturación, cobros, notificaciones y ofertas.
+        </p>
+        <FeaturesCard title="Características">
+          <li><p>Tipos de correos enviados</p></li>
+          <li><p>Correos personalizados</p></li>
+        </FeaturesCard>
+      </Section>
+
+      <Section id="envia-correos">
+        <h2>Envía correos a clientes</h2>
+        <p>
+          Este módulo también permite el envío de recordatorios de pago, facturas y estados de cuenta
+          a los clientes. Además, ofrece la opción de especificar el destinatario, lo que permite, por
+          ejemplo, enviar correos únicamente a los clientes que cumplen años en noviembre. Esto facilita
+          una comunicación más personalizada y eficiente, adaptada a las necesidades y fechas especiales
+          de cada cliente.
+        </p>
+        <Supademo title="¿Cómo enviar correos?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 2.1112828438948994; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm2tgmgdj01vxdbqcxpy3jqe1?embed_v=2" loading="eager" title="POS Web - Correos" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+  </ColumnsLayout>
+</Layout>

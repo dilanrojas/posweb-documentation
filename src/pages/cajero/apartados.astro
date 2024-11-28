@@ -1,0 +1,70 @@
+---
+import FeaturesCard from "@components/FeaturesCard.astro";
+import Layout from "@layouts/Layout.astro";
+import ColumnsLayout from "@layouts/ColumnsLayout.astro";
+import Section from "@components/Section.astro";
+import Supademo from "@components/Supademo";
+---
+
+<Layout title='Apartados'>
+  <ColumnsLayout>
+      <Section>
+        <h1>Apartados</h1>
+        <p>
+          Permite reservar productos y pagarlos en cuotas, lo que brinda flexibilidad tanto
+          para el cliente, como para la tienda. El sistema permite la gestión de todo el
+          proceso, desde la creación de un nuevo apartado, hasta la consulta y verificación
+          de pagos.
+        </p>
+        <FeaturesCard title="Funciones principales">
+          <li><p>Apartado de múltiples productos</p></li>
+          <li><p>Registro de pago inicial</p></li>
+          <li><p>Vinculación con inventario</p></li>
+        </FeaturesCard>
+        <p>
+          Los productos apartados se marcan en el inventario, y no serán liberados hasta que
+          se complete el proceso. Esto asegura que los productos no se vendan a otros
+          clientes mientras están apartados.
+        </p>
+      </Section>
+
+      <Section id="apartados-nuevo">
+        <h2>Nuevo apartado</h2>
+        <p>
+          Realice los apartados desde esta sección. Agregue los productos que el cliente
+          desea apartar, y registre los datos del cliente. Los productos se retiran
+          temporalmente del inventario disponible automáticamente.
+        </p>
+        <Supademo title="¿Cómo realizar un apartado?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm3954ilb053mh5ab0yq0kki2?embed_v=2" loading="lazy" title="Nuevo apartado" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="apartados-consultar-pagos">
+        <h2>Consultar pagos</h2>
+        <p>
+          Lleva el registro de pagos realizados para cada apartado y verifica los montos
+          pendientes. Esto incluye fechas de pago, montos abonados y el saldo pendiente.
+        </p>
+        <p>
+          El sistema muestra las fechas de los próximos pagos que el cliente debe
+          realizar, permitiendo al cajero anticiparse a los vencimientos.
+        </p>
+        <Supademo title="¿Cómo consultar pagos?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm396o7vt05svh5abfjqqk5cs?embed_v=2" loading="lazy" title="Consultar pagos" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="apartados-productos">
+        <h2>Productos apartados</h2>
+        <p>
+          Consulta qué productos están actualmente reservados bajo la modalidad de
+          apartado, junto con los detalles del cliente que los reservó, las fechas
+          de vencimiento del apartado y pagos realizados hasta la fecha.
+        </p>
+        <Supademo title="¿Cómo verificar productos apartados?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm3973pb605uyh5abutd6ffvk?embed_v=2" loading="lazy" title="Productos apartados" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+  </ColumnsLayout>
+</Layout>

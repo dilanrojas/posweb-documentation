@@ -1,0 +1,52 @@
+---
+import FeaturesIcon from '@icons/FeaturesIcon.astro'
+
+interface Props {
+  title: String
+}
+
+const { title } = Astro.props
+---
+
+<article class="features-card">
+  <h3>
+    <span>
+      <FeaturesIcon />
+    </span>
+    {title}
+  </h3>
+  <ul class="features-list">
+    <slot />
+  </ul>
+</article>
+
+<style is:global>
+  .features-card {
+    background-color: var(--bg-contrast-2);
+    padding: 2em;
+    font-size: 1rem;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0 0 0 / .1);
+    border: 1px solid var(--accent)
+  }
+
+  .features-card h3 {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    margin-bottom: 1em;
+
+    & svg { width: 14px }
+  }
+
+  @media (width <= 700px) {
+    .features-card { padding: 1.5em; }
+  }
+  
+  .features-card ul {
+    margin-left: 1.79rem;
+    list-style-type: disc;
+
+    & > * + * { margin-top: .6em }
+  }
+</style>

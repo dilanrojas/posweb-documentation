@@ -1,0 +1,80 @@
+---
+import FeaturesCard from "@components/FeaturesCard.astro";
+import Layout from "@layouts/Layout.astro";
+import ColumnsLayout from "@layouts/ColumnsLayout.astro";
+import Section from "@components/Section.astro";
+import Supademo from "@components/Supademo";
+---
+
+<Layout title='Calendarios'>
+  <ColumnsLayout>
+      <Section>
+        <h1>Calendarios</h1>
+        <p>
+          Gestiona y visualiza todas las actividades y servicios programados en una vista
+          de calendario organizada. Facilitando planificación y seguimiento de las órdenes
+          de trabajo.
+        </p>
+        <FeaturesCard title="Funciones">
+          <li><p>Agenda citas o servicios</p></li>
+          <li><p>Vista diaria, semanal y mensual de actividades</p></li>
+          <li><p>Integración con órdenes de trabajo</p></li>
+        </FeaturesCard>
+        <p>
+          Además, desde este apartado puede agendar nuevos servicios o citas para clientes.
+          Cada evento o servicio se puede registrar con detalles como la hora, responsable
+          del servicio y cualquier comentario o detalle adicional.
+        </p>
+      </Section>
+
+      <Section id="calendario-ordenes-trabajo">
+        <h2>Ordenes de trabajo</h2>
+        <p>
+          Este apartado permite al cajero o supervisor consultar todos los servicios
+          programados previamente en el sistema y asegurar que todos estén planificados y
+          en curso según lo previsto.
+        </p>
+        <p>
+          El sistema permite filtrar órdenes agendadas por diversos criterios como la fecha,
+          el tipo de servicio, cliente o trabajador asignado. Facilitando la búsqueda
+          rápida de información relevante.
+        </p>
+        <Supademo title="¿Cómo consultar ordenes agendadas?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7786458333333333; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm37ggin20dtd2xlegjzajcn2?embed_v=2" loading="lazy" title="Calendarios - Ordenes de trabajo" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="calendario-servicios">
+        <h2>Servicios</h2>
+        <p>
+          Destinado a revisar los servicios que han sido programados o asignados a través
+          del calendario, asegurando que todos estén correctamente organizados y que los
+          recursos necesarios estén disponibles para la ejecución de cada trabajo.
+        </p>
+        <p>
+          Puede consultar detalles asociados, como el tiempo estimado, materiales o
+          productos necesarios y datos del cliente.
+        </p>
+        <Supademo title="¿Cómo revisar servicios en calendario?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7776315789473685; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm37glom30dwf2xle7b5yiq6r?embed_v=2" loading="lazy" title="New Demo" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="calendario-servicios-programados">
+        <h2>Servicios programados</h2>
+        <p>
+          Garantiza que los servicios estén bien planificados, permitiendo verificar
+          los trabajos que ya están en curso o planificar nuevos servicios para fechas
+          futuras.
+        </p>
+        <p>
+          El cajero o supervisor puede revisar los servicios ya programados para la fecha
+          consultada, asegurándose de que todo esté en orden y evitar conflictos en la
+          programación.
+        </p>
+        <Supademo title="¿Cómo verificar y programar servicios?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7776315789473685; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm34wm43w0hg9ad3x4i9c18bt?embed_v=2" loading="lazy" title="Calendarios - Servicios programados" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+  </ColumnsLayout>
+</Layout>

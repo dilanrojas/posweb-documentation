@@ -1,0 +1,295 @@
+---
+import FeaturesCard from "@components/FeaturesCard.astro";
+import Layout from "@layouts/Layout.astro";
+import ColumnsLayout from "@layouts/ColumnsLayout.astro";
+import Section from "@components/Section.astro";
+import Supademo from "@components/Supademo";
+---
+
+<Layout title='Configuraciones'>
+  <ColumnsLayout>
+      <Section>
+        <h1>Configuraciones</h1>
+        <p>
+          Permite ajustar diversos parámetros del sistema según las necesidades específicas de la empresa.
+        </p>
+        <FeaturesCard title="Administra">
+          <li><p>Gestión de sucursales</p></li>
+          <li><p>Permisos y roles de usuarios</p></li>
+          <li><p>Parámetros financieros</p></li>
+          <li><p>Categorización</p></li>
+          <li><p>Clasificación de personal</p></li>
+          <li><p>Ajustes generales</p></li>
+        </FeaturesCard>
+        <p>
+          El objetivo de este apartado es garantizar que el software funcione de acuerdo a las políticas y
+          procesos específicos de la empresa, manteniendo la seguridad y el control de la información.
+        </p>
+      </Section>
+
+      <Section id="sucursales">
+        <h2>Sucursales</h2>
+        <p>
+          Gestiona las diferentes ubicaciones físicas o virtuales de una empresa, agregando detalles como el
+          nombre comercial, dirección física, y datos de contacto.
+        </p>
+        <p>
+          Permite a cada sucursal gestionar su inventario de manera independiente. Esencial
+          para mantener el control de las existencias específicas con los datos correspondientes.
+          Visite la sección
+          <a href="/cajero/vehiculos" class="text-link">Cajero</a>
+          para más documentación sobre los movimientos dentro de la sucursal.
+        </p>
+        <p>
+          El sistema permite establecer una única sucursal habilitada para Ecommerce (comercio
+          electrónico).
+        </p>
+        <Supademo title="¿Cómo administrar sucursales?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm3nhu9k40v06qdk98a8lh2e3?embed_v=2" loading="lazy" title="Sucursales" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="actividades-economicas">
+        <h2>Actividades económicas</h2>
+        <p>
+          A través de esta herramienta el usuario puede clasificar y registrar las actividades que la
+          empresa realiza. Es una herramienta esencial para la gestión fiscal y contable, ya que
+          facilita el cumplimiento de las normativas fiscales locales e internacionales.
+        </p>
+        <p>
+          La empresa debe asignar códigos de actividad específicos para cada tarea o servicio que ofrece,
+          lo que asegura que los datos sean precisos y conformes a las regulaciones.
+        </p>
+        <p>
+          Las actividades de cada empresa pueden ser validadas desde
+          <a href="https://atv.hacienda.go.cr/ATV/frmConsultaSituTributaria.aspx" class="text-link" target="_blank">Consulta de Situación Tributaria</a>.
+        </p>
+        <Supademo title="¿Cómo agregar nuevas actividades?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 2.0919220055710306; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm2tgx95201wldbqciu6g9ur8?embed_v=2" loading="lazy" title="Configuración - Actividad económica" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="usuarios">
+        <h2>Usuarios</h2>
+        <p>
+          Fundamental para gestionar el acceso y los permisos dentro del sistema. Permite asignar roles y
+          establecer qué funciones pueden realizar los diferentes usuarios dentro del software.
+        </p>
+        <p>
+          Se pueden establecer credenciales de acceso personalizadas, como nombre de usuario, contraseña y
+          nivel de permisos. Esto garantiza que cada usuario tenga el acceso adecuado según sus responsabilidades.
+        </p>
+        <Supademo title="¿Cómo añadir usuarios?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 2.1112828438948994; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm2thik8v0210dbqcqk3a9z2k?embed_v=2" loading="lazy" title="Configuración - Usuarios" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="profesionales">
+        <h2>Profesionales</h2>
+        <p>
+          El apartado de Profesionales está diseñado para gestionar la información de los profesionales que
+          trabajan en la empresa. Permite registrar y administrar datos clave, como sus credenciales, tarifas
+          de servicio, áreas de especialización y datos de contacto.
+        </p>
+        <p>
+          Los profesionales registrados en el sistema estarán relacionados a los módulos de calendario y
+          órdenes de trabajo.
+        </p>
+        <Supademo title="¿Cómo registrar profesionales?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 2.1112828438948994; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm2upkl4d0exkdbqcxxm82kz7?embed_v=2" loading="lazy" title="Configuración - Profesionales" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="vendedores">
+        <h2>Vendedores</h2>
+        <p>
+          Permite registrar y gestionar la información de los vendedores o representantes comerciales de la
+          empresa, facilitando la administración de las ventas y las comisiones.
+        </p>
+        <p>
+          El módulo gestiona las comisiones mediante porcentajes asignados que se verán reflejados en
+          las ventas realizadas por cada vendedor.
+        </p>
+        <Supademo title="¿Cómo agregar vendedores?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 2.1112828438948994; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm2uqp2be0fsldbqc4pphsrk5?embed_v=2" loading="lazy" title="Configuración - Vendedores" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="clasif-proveedores">
+        <h2>Clasif. Proveedores</h2>
+        <p>
+          Gestiona y organiza eficientemente los proveedores de la empresa. A través de esta herramienta,
+          es posible clasificar según criterios como el tipo de productos o servicios que ofrecen.
+        </p>
+        <p>
+          Este módulo es esencial para optimizar la gestión de la cadena de suministro, asegurando la calidad
+          y eficiencia en las compras de la empresa.
+        </p>
+        <Supademo title="¿Cómo clasificar proveedores?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 2.1112828438948994; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm2uvspvg0hgsdbqcewodj3uk?embed_v=2" loading="lazy" title="Configuración - Clasif. Proveedores" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="vehiculos">
+        <h2>Vehículos</h2>
+        <p>
+          Este módulo se utiliza para la gestión de vehículos de la empresa o de los clientes, especialmente
+          si se dedica a actividades que involucran talleres o lubricentros.
+        </p>
+        <p>
+          Dentro de este, podemos dividir la informacion en dos categorías:
+        </p>
+      </Section>
+      
+      <Section id="vehiculos-marcas">
+        <h3>Marcas</h3>
+        <p>
+          Puede agregar nuevas marcas en el sistema y permitir la clasificación de vehículos dentro de estos grupos.
+        </p>
+        <Supademo title="¿Cómo añadir marcas?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 2.1112828438948994; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm2uwllj80hpwdbqcruov1v7j?embed_v=2" loading="lazy" title="Configuración - Vehículos" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="vehiculos-modelos">
+        <h3>Modelos</h3>
+        <p>
+          Para cada una de las marcas registradas en el sistema, puede ingresar modelos que permiten específicar
+          las características del vehículo a ingresar.
+        </p>
+        <Supademo title="¿Cómo agregar modelos?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 2.1112828438948994; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm2uyjmek0iy0dbqcvmd72h9n?embed_v=2" loading="lazy" title="Configuración - Vehículos" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="finanzas">
+        <h2>Finanzas</h2>
+        <p>
+          Este módulo permite registrar deudas, como cuentas por pagar o cobrar, y establecer parámetros clave
+          para gestionar los movimientos financieros. Entre estos parámetros se incluyen la definición de tipos
+          de ingresos, egresos, límites de crédito, entre otros.
+        </p>
+        <p>
+          Con estas funcionalidades, se garantiza un flujo de caja organizado, proporcionando una visión clara
+          y precisa de la liquidez de la empresa, lo que facilita la toma de decisiones financieras informadas.
+        </p>
+      </Section>
+
+      <Section id="finanzas-deudas-cxc">
+        <h3>Deudas iniciales CxC</h3>
+        <p>
+          Facilita la gestión de los saldos que los clientes adeudan a la empresa. Ayuda
+          a registrar los créditos pendientes, proporcionando un historial completo de las
+          <a href="/cajero/finanzas#finanzas-cxcobrar" class="text-link">Cuentas por cobrar</a>
+          en cada sucursal.
+        </p>
+        <p>
+          Permite ingresar los saldos pendientes detallando el nombre del cliente, montos,
+          fecha en la que se genera la deuda y fecha límite de pago.
+        </p>
+        <Supademo title="¿Cómo añadir deudas CxC?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7786458333333333; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm3q3p9xp0b0ddhzsepk629qj?embed_v=2" loading="lazy" title="Deudas iniciales CxC" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="finanzas-deudas-cxp">
+        <h3>Deudas iniciales CxP</h3>
+        <p>
+          Gestiona las deudas que la empresa tiene con sus proveedores. Garantiza
+          que todas las obligaciones financieras sean debidamente registradas, ofreciendo
+          un panorama completo de las
+          <a href="/admin/sucursal/finanzas#finanzas-cxpagar" class="text-link">Cuentas por pagar</a>
+          con los proveedores de cada sucursal.
+        </p>
+        <Supademo title="¿Cómo registrar deudas CxP?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7786458333333333; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm3q5zpar0cywdhzslbs6qwga?embed_v=2" loading="lazy" title="Deudas iniciales CxP" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="finanzas-ingresos">
+        <h3>Tipos de ingresos</h3>
+        <p>
+          Este apartado permite clasificar otros tipos de ingresos que la empresa recibe por
+          diversos productos o servicios brindados.
+        </p>
+        <Supademo title="¿Cómo agregar tipos de ingresos?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 2.1112828438948994; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm2w56o69004uoguo4lnglk13?embed_v=2" loading="lazy" title="Configuración - Finanzas" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="finanzas-egresos">
+        <h3>Tipos de egresos</h3>
+        <p>
+          Se utiliza para clasificar y gestionar salidas de dinero por motivos varios. Como
+          comisiones, ausencias o subsidios.
+        </p>
+        <Supademo title="¿Cómo añadir tipos de egresos?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 2.1112828438948994; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm2w978sd01q6krgp6pvtwmsm?embed_v=2" loading="lazy" title="Tipos de egresos" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="finanzas-descuentos">
+        <h3>Descuentos</h3>
+        <p>
+          Encargado de gestionar las políticas de descuentos que la empresa ofrece. Se pueden configurar
+          descuentos por volumen, promociones temporales o descuentos personalizados según criterios
+          específicos.
+        </p>
+        <Supademo title="¿Cómo registrar descuentos?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 2.1112828438948994; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm2w3be7h0f7lq6qinsvzd7zz?embed_v=2" loading="lazy" title="Descuentos" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="finanzas-dias-credito">
+        <h3>Días de crédito</h3>
+        <p>
+          Configura los plazos de pago que se ofrecen. Permite establecer días de crédito
+          y en el proceso de venta, asignar estos a clientes según su historial de pagos o relación comercial.
+        </p>
+        <Supademo title="¿Cómo añadir días de crédito?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 2.1112828438948994; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm2w0iy8k0e2oq6qi28slpdar?embed_v=2" loading="lazy" title="Configuración - Finanzas" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="finanzas-limites-credito">
+        <h3>Límites de crédito</h3>
+        <p>
+          Establece los montos máximos de crédito que se otorgan a los clientes. Puede definir un límite
+          de crédito para cada cliente según su historial crediticio.
+        </p>
+        <Supademo title="¿Cómo registrar límites de crédito?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 2.1112828438948994; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm2w1wyra0eptq6qiafo0x0nc?embed_v=2" loading="lazy" title="Configuración - Finanzas" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="configuracion-general">
+        <h2>Configuración general</h2>
+        <p>
+          Garantiza que el software se ajuste a las necesidades específicas de los usarios y de la
+          organización. Puede personalizar información específica de la empresa, como nombre, tipo
+          de identificación, ubicación, entre otros.
+        </p>
+        <Supademo title="¿Cómo realizar configuraciones?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7786458333333333; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm2xiugwj0gnukrgp7a8i39ru?embed_v=2" loading="lazy" title="Configuración general" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="configuracion-reservas-servicios">
+        <h2>URL Para Reservas de Servicios</h2>
+        <p>
+          Comparta una URL con clientes para facilitar reservas de servicios en cualquier
+          momento. Podrán seleccionar la sucursal, fecha y hora de la cita. Además del
+          servicio a agendar y datos del cliente para la reservación.
+        </p>
+        <p>
+          Visite
+          <a href="/cajero/gestion-de-agenda" class="text-link">Gestión de agenda</a>
+          para realizar la configuración de fechas y horas a mostrar en la URL, así como confirmar
+          las citas agendadas y asignar profesionales a cargo de las mismas.
+        </p>
+        <Supademo title="¿Cómo compartir URL para reservas?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm3g7utfm139k128vyj3p6ugh?embed_v=2" loading="lazy" title="URL Para Reservas de Servicios" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+  </ColumnsLayout>
+</Layout>

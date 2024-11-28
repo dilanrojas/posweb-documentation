@@ -1,0 +1,97 @@
+---
+import FeaturesCard from "@components/FeaturesCard.astro";
+import Layout from "@layouts/Layout.astro";
+import ColumnsLayout from "@layouts/ColumnsLayout.astro";
+import Section from "@components/Section.astro";
+import Supademo from "@components/Supademo";
+---
+
+<Layout title='Compras'>
+  <ColumnsLayout>
+      <Section>
+        <h1>Compras</h1>
+        <p>
+          Registra todas las transacciones de adquisión de bienes o servicios que
+          se concretan. Este módulo se utiliza para documentar la llegada de productos
+          y el registro contable de la transacción.
+        </p>
+        <FeaturesCard title="Facilidades">
+          <li><p>Registro de compras</p></li>
+          <li><p>Factura de compra</p></li>
+          <li><p>Notas de crédito</p></li>
+          <li><p>Historial de compras</p></li>
+        </FeaturesCard>
+        <p>
+          El sistema permite registrar las facturas que los proveedores emiten,
+          detallando los productos o servicios recibidos, junto con impuestos,
+          descuentos y otros conceptos aplicables.
+        </p>
+      </Section>
+
+      <Section id="compras-proveedores">
+        <h2>Proveedores</h2>
+        <p>
+          Gestiona todas las relaciones con las empresas o personas que suministran
+          bienes y/o servicios a la empresa. Registra los datos de cada proveedor,
+          como su información de contacto y dirección.
+        </p>
+        <p>
+          Se pueden clasificar por categorías, para agilizar el proceso de compra y
+          la gestión de inventarios.
+        </p>
+        <Supademo title="¿Cómo registrar proveedores?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm37ruve30hfs2xle243v7s7g?embed_v=2" loading="lazy" title="New Demo" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="compras-ordenes">
+        <h2>Ordenes de compra</h2>
+        <p>
+          Crea y emite órdenes de compra a los proveedores. Estas órdenes especifican
+          los productos o servicios solicitados, la cantidad, el precio acordado, la
+          fecha de entrega y las condiciones de pago.
+        </p>
+        <p>
+          El sistema proporciona funciones para hacer seguimiento del estado de cada
+          orden de compra (pendiente, en proceso, completada), permitiendo gestionar
+          las entregas de manera eficiente.
+        </p>
+        <Supademo title="¿Cómo generar ordenes de compra?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm37tt13u0ikr2xlebfq6w7ic?embed_v=2" loading="lazy" title="Ordenes de compra" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="compras-nueva-compra">
+        <h2>Nueva compra</h2>
+        <p>
+          Registra las compras realizadas, actualizando el inventario con los productos
+          adquiridos automáticamente.
+        </p>
+        <p>
+          Lleva el control por números de compra, fecha y proveedor al que se realizó
+          la compra. En caso de haber solicitado crédito, deberá registrar los pagos
+          a dicho proveedor desde
+          <a href="/admin/sucursal/finanzas#cxpagar-estados-cuenta" class="text-link">Estados de cuenta</a>.
+        </p>
+        <Supademo title="¿Cómo realizar compras?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm37uatxc0iok2xleiunepz3e?embed_v=2" loading="lazy" title="Nueva compra" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="compras-notas-credito">
+        <h2>Notas de crédito</h2>
+        <p>
+          Las notas de crédito suelen emitirse cuando hay devoluciones de productos o
+          cuando un proveedor concede un descuento posterior a la compra. Este apartado
+          permite contar con un informe de notas consumidas o aplicables.
+        </p>
+        <p>
+          El sistema permite hacer uso de las notas de crédito a facturas pendientes,
+          ajustando los saldos de manera precisa.
+        </p>
+        <Supademo title="¿Cómo gestionar notas de crédito?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm37wlzc00iye2xley8j1d4hw?embed_v=2" loading="lazy" title="Notas de crédito" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+  </ColumnsLayout>
+</Layout>

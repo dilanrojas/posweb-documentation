@@ -1,0 +1,401 @@
+---
+import FeaturesCard from "@components/FeaturesCard.astro";
+import Layout from "@layouts/Layout.astro";
+import ColumnsLayout from "@layouts/ColumnsLayout.astro";
+import Section from "@components/Section.astro";
+import ConsultasPicture from "@components/ConsultasPicture.astro";
+---
+
+<Layout title='Consultas y Reportes'>
+  <ColumnsLayout>
+      <Section>
+        <h1>Consultas y Reportes</h1>
+        <p>
+          Proporciona un análisis sobre el desempeño de la empresa desde múltiples perspectivas.
+          Este módulo permite obtener información detallada de los movimientos realizados
+          en los demás módulos del sistema.
+        </p>
+        <FeaturesCard title="Herramientas">
+          <li><p>Consultas sobre órdenes de trabajo</p></li>
+          <li><p>Reportes de servicios realizados</p></li>
+          <li><p>Revisión de comisiones</p></li>
+          <li><p>Movimientos de inventario</p></li>
+          <li><p>Reportes de ventas y compras</p></li>
+          <li><p>Resumen de cierres</p></li>
+        </FeaturesCard>
+        <p>
+          Utilice la información proporcionada por los registros del sistema para una toma de
+          decisiones según la situación actual de la empresa.
+        </p>
+      </Section>
+
+      <Section id="consultas-ordenes-trabajo">
+        <h2>Ordenes de trabajo</h2>
+        <p>
+          Consulta todas las órdenes de trabajo generadas, con información detallada sobre
+          clientes, servicios realizados y costos
+        </p>
+        <p>
+          Genera repores específicos que asocian órdenes de trabajo a vehículos determinados,
+          permitiendo un seguimiento claro del historial de servicios realizados con las
+          comisiones correspondientes a cada profesional.
+        </p>
+      </Section>
+
+      <Section id="ordenes-trabajo-ordenes">
+        <h3>Ordenes de trabajo</h3>
+        <p>
+          Realice consultas aplicando filtros de fecha, cliente y el estado de las mismas.
+          Puede consultar sobre las ordenes de trabajo ingresadas, en proceso, o terminadas.
+        </p>
+        <p>
+          El sistema proporciona información sobre el profesional a cargo, servicio brindado y
+          la informacion de costos y precios.
+        </p>
+        <ConsultasPicture
+          imgSrc="/consultas-y-reportes/ordenes-de-trabajo/ordenes-de-trabajo.png"
+          imgAlt="Captura de pantalla de consultas de resumenes de cierre"
+        />
+      </Section>
+
+      <Section id="ordenes-ot-vehiculo">
+        <h3>OT Por vehículo</h3>
+        <p>
+          Verifique las ordenes de trabajo registradas para cada vehículo. Realice búsquedas
+          por placa de vehículo y consulte los reportes para cada orden de trabajo.
+        </p>
+        <p>
+          Además, cuenta con la información del cliente, vehículo registrado (marca y modelo),
+          transmisión y kilometraje.
+        </p>
+        <ConsultasPicture
+          imgSrc="/consultas-y-reportes/ordenes-de-trabajo/ot-por-vehiculo.png"
+          imgAlt="Captura de pantalla de ordenes de trabajo por vehículo"
+        />
+      </Section>
+
+      <Section id="ordenes-servicios">
+        <h3>Servicios</h3>
+        <p>
+          Obtenga informes sobre servicios brindados a vehículos de clientes. Aplique filtros
+          por servicios, profesionales a cargo y estado del servicio brindado.
+        </p>
+        <p>
+          Contiene información sobre el servicio aplicado, cliente y vehículo, precios y costos,
+          tiempo estimado y tiempo requerido para completar la orden.
+        </p>
+        <ConsultasPicture
+          imgSrc="/consultas-y-reportes/ordenes-de-trabajo/servicios.png"
+          imgAlt="Captura de pantalla de servicios en ordenes de trabajo"
+        />
+      </Section>
+
+      <Section id="ordenes-comisiones">
+        <h3>Comisiones</h3>
+        <p>
+          Consulte sobre las comisiones para cada profesional. El sistema muestra el cliente,
+          profesional, servicio brindado, precio, tipo de comisión (monto fijo o porcentaje) y
+          el monto.
+        </p>
+        <p>
+          Puede aplicar filtros por fecha, servicio específico y profesionales registrados en el
+          sistema.
+        </p>
+        <ConsultasPicture
+          imgSrc="/consultas-y-reportes/ordenes-de-trabajo/comisiones.png"
+          imgAlt="Captura de pantalla de comisiones por ordenes de trabajo"
+        />
+      </Section>
+
+      <Section id="consultas-inventario">
+        <h2>Inventario</h2>
+        <p>
+          Registra todas las entradas y salidas de inventario en un rango de fechas específico.
+          Además de todas las operaciones relacionadas con un producto en particular, como ventas,
+          devoluciones y ajustes.
+        </p>
+        <p>
+          Brinda un análisis del valor total del inventario actual, considerando costos de
+          adquisición y cantidades disponibles
+        </p>
+      </Section>
+
+      <Section id="inventario-mov-fecha">
+        <h3>Mov por fecha</h3>
+        <p>
+          Proporciona información sobre los cambios en el inventario durante períodos específicos.
+          Muestra la categoría y subcategoría donde hubo cambios, producto y movimiento correspondiente.
+        </p>
+        <p>
+          Además, señaliza el tipo de movimiento con una "S" en caso de salidas, y "E", para entradas.
+          El sistema indicará la cantidad para cada producto.
+        </p>
+        <ConsultasPicture
+          imgSrc="/consultas-y-reportes/inventario/mov-por-fecha.png"
+          imgAlt="Captura de pantalla de consultas por movimiento de fecha en inventario"
+        />
+      </Section>
+
+      <Section id="inventario-mov-producto">
+        <h3>Mov por producto</h3>
+        <p>
+          Confirme los movimientos y estado de stock para cada producto en inventario. Realice una
+          búsqueda del producto a consultar y refresque los resultados. Se muestra información sobre
+          las entradas y salidas del producto, además de la información correspondiente al punto
+          de pedido y stock mínimo.
+        </p>
+        <p>
+          El sistema indica el estado de stock para el producto, "A" para un estado activo y "EC" para
+          estado de stock crítico. También, registra el movimiento realizado, ya sea compra o venta y
+          la cantidad.
+        </p>
+        <ConsultasPicture
+          imgSrc="/consultas-y-reportes/inventario/mov-por-producto.png"
+          imgAlt="Captura de movimientos por producto"
+        />
+      </Section>
+
+      <Section id="inventario-valuacion-inventario">
+        <h3>Valuación inventario</h3>
+        <p>
+          Brinda informes de inventario para cada categoría y producto en inventario. Verifique
+          existencias, precio actual, costo promedio y el último costo al adquirir el producto.
+        </p>
+        <p>
+          Puede realizar búsquedas valorando el costo promedio o el último costo, al igual que
+          filtrar por categorías y sub categorías.
+        </p>
+        <ConsultasPicture
+          imgSrc="/consultas-y-reportes/inventario/valuacion-inventario.png"
+          imgAlt="Captura de pantalla de consultas sobre valuación de inventario"
+        />
+      </Section>
+
+      <Section id="consultas-ventas">
+        <h2>Ventas</h2>
+        <p>
+          Proporciona un informe sobre todas las ventas realizadas en un periodo específico,
+          incluyendo montos totales, métodos de pago y cliente, permitiendo identificar a
+          los clientes más importantes o frecuentes.
+        </p>
+        <p>
+          Analiza ventas según los productos vendidos y servicios, destacando los más
+          demandados, mostrando ventas y ganancias.
+        </p>
+      </Section>
+
+      <Section id="ventas-por-cliente">
+        <h3>Por cliente</h3>
+        <p>
+          Muestra un desglose de todas las ventas realizadas, clasificadas por cliente.
+          Incluye información por fechas, montos totales de cada transacción e información
+          del comprador.
+        </p>
+        <p>
+          Permite filtrar búsquedas por cliente, tipo de venta (contado o crédito) y
+          consultar por fechas o periodos específicos.
+        </p>
+        <ConsultasPicture
+          imgSrc="/consultas-y-reportes/ventas/por-cliente.png"
+          imgAlt="Captura de pantalla sobre consultas de ventas por cliente"
+        />
+      </Section>
+
+      <Section id="ventas-por-producto">
+        <h3>Por producto</h3>
+        <p>
+          Proporciona informes sobre las ventas realizadas para cada producto,
+          permitiendo medir el rendimiento individual de cada uno de los artículos
+          en inventario.
+        </p>
+        <p>
+          Muestra el número de unidades vendidas, ingresos generados y fechas de
+          venta. Permite reconocer los productos con mayor demanda, ayudando en la
+          planificación de inventario y estrategias de venta.
+        </p>
+        <ConsultasPicture
+          imgSrc="/consultas-y-reportes/ventas/por-producto.png"
+          imgAlt="Captura de pantalla de consultas sobre ventas por producto"
+        />
+      </Section>
+
+      <Section id="ventas-resumen-producto">
+        <h3>Resumen x producto</h3>
+        <p>
+          Condensa la información de ventas por producto en un reporte con datos
+          útiles como las veces que un producto se ha vendido, la cantidad
+          en cada una de ellas y las ganancias reportadas.
+        </p>
+        <p>
+          Cuenta con filtros por categorías, sub categorías o todos los productos.
+          Además, puede consultar por fechas determinadas.
+        </p>
+        <ConsultasPicture
+          imgSrc="/consultas-y-reportes/ventas/resumen-x-producto.png"
+          imgAlt="Captura de pantalla de consultas de resumen por producto en inventario"
+        />
+      </Section>
+
+      <Section id="ventas-resumen-servicio">
+        <h3>Resumen x servicio</h3>
+        <p>
+          Permite consultar sobre ventas de servicios, cantidad de veces que el
+          servicio se ha brindado y el monto de ganancias reportado.
+        </p>
+        <p>
+          Los datos pueden obtenerse por categorías o para todos los servicios
+          que la sucursal tiene en inventario.
+        </p>
+        <ConsultasPicture
+          imgSrc="/consultas-y-reportes/ventas/resumen-x-servicio.png"
+          imgAlt="Captura de pantalla de consultas del resumen por servicio en inventario"
+        />
+      </Section>
+
+      <Section id="ventas-por-servicio">
+        <h3>Por servicio</h3>
+        <p>
+          Indica las ventas para cada servicio, aplicando filtros de fechas,
+          categorías o búsquedas para cada servicio a consultar.
+        </p>
+        <p>
+          Permite obtener información sobre el cliente, precios y costos. Además
+          de la cantidad para el servicio adquirido.
+        </p>
+        <ConsultasPicture
+          imgSrc="/consultas-y-reportes/ventas/por-servicio.png"
+          imgAlt="Captura de pantalla de consultas por servicio en inventario"
+        />
+      </Section>
+
+      <Section id="ventas-por-impuesto">
+        <h3>Por impuesto</h3>
+        <p>
+          Muestra las ventas registradas en el sistema con los respectivos
+          porcentajes de impuesto aplicado. Permite verificar que los impuestos
+          sobre las ventas, como el IVA (Impuesto al Valor Agregado), estén
+          correctamente declarados.
+        </p>
+        <p>
+          El sistema indica el cliente y cantidades totales para cada producto adquirido
+          durante el periodo determinado.
+        </p>
+        <ConsultasPicture
+          imgSrc="/consultas-y-reportes/ventas/por-impuesto.png"
+          imgAlt="Captura de pantalla de consultas sobre ventas por impuesto"
+        />
+      </Section>
+
+      <Section id="ventas-por-comisiones">
+        <h3>Comisiones</h3>
+        <p>
+          Proporciona la información de comisiones en cada una de las ventas
+          de la sucursal. Permite aplicar filtros por vendedor, y verificar
+          que las comisiones se aplican correctamente según lo estimado.
+        </p>
+        <p>
+          Muestra información de la fecha de la venta, cliente y vendedor.
+          Al igual que los porcentajes y montos correspondientes a la venta.
+        </p>
+        <ConsultasPicture
+          imgSrc="/consultas-y-reportes/ventas/comisiones.png"
+          imgAlt="Captura de pantalla de ventas por comisiones"
+        />
+      </Section>
+
+      <Section id="consultas-compras">
+        <h2>Compras</h2>
+        <p>
+          Consulta todas las compras realizadas, con información sobre montos, proveedores
+          y productos adquiridos. Detallas las compras asociadas a cada proveedor, permitiendo
+          evaluar su rendimiento y confiabilidad.
+        </p>
+        <p>
+          Evalúa las adquisiciones según los productos comprados, identificando tendencias y
+          necesidades de reposición, mostrando cantidades adquiridas y costos totales.
+        </p>
+      </Section>
+
+      <Section id="compras-por-proveedor">
+        <h3>Por proveedor</h3>
+        <p>
+          Detalla las compras a cada proveedor que se han efectuado en un determinado período,
+          indicando el nombre, fecha de la compra, factura, montos y método de pago utilizado.
+        </p>
+        <p>
+          El sistema permite realizar búsquedas para cada proveedor registrado, además de aplicar
+          filtros por método de pago, ya sea de contado o crédito.
+        </p>
+        <ConsultasPicture
+          imgSrc="/consultas-y-reportes/compras/por-proveedor.png"
+          imgAlt="Captura de pantalla de compras por proveedor"
+        />
+      </Section>
+
+      <Section id="compras-por-producto">
+        <h3>Por producto</h3>
+        <p>
+          Documenta las compras realizadas para cada producto en inventario. Informa sobre la fecha
+          en la que se realiza la compra, proveedor, producto adquirido y su categoría. Específica
+          la cantidad, precios y costos, así como la utilidad.
+        </p>
+        <p>
+          Aplica filtros por fecha, por categorías y sub categorías. También cuenta con la posibilidad
+          de realizar búsquedas para cada producto y consultar específicamente por cada uno de ellos.
+        </p>
+        <ConsultasPicture
+          imgSrc="/consultas-y-reportes/compras/por-producto.png"
+          imgAlt="Captura de pantalla de consultas de ventas por producto"
+        />
+      </Section>
+
+      <Section id="compras-resumen-producto">
+        <h3>Resumen x producto</h3>
+        <p>
+          Almacena reportes sobre compras por cada producto. Muestra información sobre cantidad de ventas,
+          unidad utilizada para la venta del producto y el monto.
+        </p>
+        <p>
+          Puede realizar la consulta por categorías, sub categorías o para todos los productos adquiridos
+          durante la fecha determinada.
+        </p>
+        <ConsultasPicture
+          imgSrc="/consultas-y-reportes/compras/resumen-x-producto.png"
+          imgAlt="Captura de pantalla de consultas del resumen de compras por producto"
+        />
+      </Section>
+
+      <Section id="compras-por-impuesto">
+        <h3>Por impuesto</h3>
+        <p>
+          Indica las compras realizadas a cada proveedor con los respectivos porcentajes de impuesto,
+          descuento (en caso de aplicar) y el total por la compra.
+        </p>
+        <p>
+          Se muestra la fecha de la compra, el tipo de documento para la compra, proveedor, y
+          totales para el período de tiempo a consultar.
+        </p>
+        <ConsultasPicture
+          imgSrc="/consultas-y-reportes/compras/por-impuesto.png"
+          imgAlt="Captura de pantalla de consulta de compras por impuesto"
+        />
+      </Section>
+
+      <Section id="consultas-resumen-cierres">
+        <h2>Resumen de cierres</h2>
+        <p>
+          Detalla los cierres diarios o por turno, mostrando el saldo inicial en el momento
+          de la apertura de caja, ventas realizadas, notas de crédito aplicadas,
+          movimientos de salidas y entradas de dinero.
+        </p>
+        <p>
+          Permite comparar los cierres de caja en diferentes periodos para identificar
+          patrones o inconsistencias.
+        </p>
+        <ConsultasPicture
+          imgSrc="/consultas-y-reportes/resumen-de-cierres/resumen-de-cierres.png"
+          imgAlt="Captura de pantalla de consultas de resumenes de cierre"
+        />
+      </Section>
+  </ColumnsLayout>
+</Layout>

@@ -1,0 +1,35 @@
+---
+import PosWebIcon from "@icons/PosWebIcon.astro"
+---
+
+<div class="logo-wrapper">
+  <a href="/">
+    <PosWebIcon />
+    <h1>POS Web</h1>
+  </a>
+</div>
+
+<style>
+  .logo-wrapper {
+    
+    & h1 {
+      font-size: 1.4em;
+      color: var(--text);
+      font-weight: 500;
+    }
+    
+    & a {
+      gap: .8em;
+      align-items: center;
+      display: flex;
+    }
+  }
+</style>
+
+<style is:global>
+
+  .logo-wrapper svg {
+    fill: hsl(167, 84%, 40%)!important;
+    width: 24px;
+  }
+</style>

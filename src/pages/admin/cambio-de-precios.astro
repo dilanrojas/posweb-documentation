@@ -1,0 +1,43 @@
+---
+import FeaturesCard from "@components/FeaturesCard.astro";
+import Layout from "@layouts/Layout.astro";
+import ColumnsLayout from "@layouts/ColumnsLayout.astro";
+import Section from "@components/Section.astro";
+import Supademo from "@components/Supademo";
+---
+
+<Layout title='Cambio de precios'>
+  <ColumnsLayout>
+      <Section>
+        <h1>Cambio de precios</h1>
+        <p>
+          Permite a la empresa ajustar los precios de productos y servicios
+          de forma rápida y controlada. Esta herramienta facilita la administración de la política de precios
+          en tiempo real, asegurando que las variaciones del mercado, los costos de adquisición y las
+          promociones se reflejen inmediatamente en el sistema.
+        </p>
+        <FeaturesCard title="Utilidades">
+          <li><p>Actualización masiva de precios</p></li>
+          <li><p>Aumento/Disminución de precios</p></li>
+          <li><p>Cambio de precios por categorías</p></li>
+        </FeaturesCard>
+      </Section>
+
+      <Section id="cambio-precios">
+        <h2>Registrar cambio de precios</h2>
+        <p>
+          Esta herramienta es especialmente útil en empresas que manejan grandes volúmenes de productos o
+          servicios con precios que fluctúan frecuentemente. Proporciona una justificación clara y completa
+          para cada cambio, asegurando un manejo transparente y justificable de los precios.
+        </p>
+        <p>
+          El registro de cambio de precios es un movimiento que no se podrá deshacer. Para volver al
+          estado anterior, deberá realizar un cambio de precios con el mismo porcentaje de aumento o
+          disminución de acuerdo al cambio aplicado.
+        </p>
+        <Supademo title="¿Cómo añadir cambios de precios?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm3t1m59r0yns5a3tnhbqkbp6?embed_v=2" loading="lazy" title="New Demo" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+  </ColumnsLayout>
+</Layout>

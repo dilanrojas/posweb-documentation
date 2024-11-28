@@ -1,0 +1,38 @@
+---
+import FeaturesCard from "@components/FeaturesCard.astro";
+import Layout from "@layouts/Layout.astro";
+import ColumnsLayout from "@layouts/ColumnsLayout.astro";
+import Section from "@components/Section.astro";
+import Supademo from "@components/Supademo";
+---
+
+<Layout title='Subir orden XML'>
+  <ColumnsLayout>
+      <Section>
+        <h1>Subir orden XML</h1>
+        <p>
+          Funcionalidad clave que permite a las empresas automatizar y gestionar eficientemente
+          la entrada de documentos como órdenes de compra mediante archivos en formato XML. Es
+          particularmente útil en un entorno donde las empresas realizan compras a proveedores
+          que también utilizan software con facturación electrónica y transmisión de datos
+          estructurados
+        </p>
+        <FeaturesCard title="Permite">
+          <li><p>Carga archivos XML</p></li>
+          <li><p>Validación de datos</p></li>
+          <li><p>Actualización automática del inventario</p></li>
+          <li><p>Aceleración del proceso de registro</p></li>
+        </FeaturesCard>
+        <p>
+          El sistema admite la carga de
+          <a href="/admin/sucursal/compras#compras-ordenes" class="text-link">Ordenes de compra</a>
+          recibidas de los proveedores en formato XML. Simplificando el proceso
+          de ingreso de compras al sistema, sin necesidad de ingresar manualmente
+          cada dato.
+        </p>
+        <Supademo title="¿Cómo subir una orden XML?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm3p1fgxt00kk28o8zutrlrg3?embed_v=2" loading="lazy" title="Subir Orden XML" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+  </ColumnsLayout>
+</Layout>

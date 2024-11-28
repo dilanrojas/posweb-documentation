@@ -1,0 +1,87 @@
+---
+import FeaturesCard from "@components/FeaturesCard.astro";
+import Layout from "@layouts/Layout.astro";
+import ColumnsLayout from "@layouts/ColumnsLayout.astro";
+import Section from "@components/Section.astro";
+import Supademo from "@components/Supademo";
+---
+
+<Layout title='Finanzas'>
+  <ColumnsLayout>
+      <Section>
+        <h1>Finanzas</h1>
+        <p>
+          <p>
+            Centraliza la gestión financiera de la empresa, permitiendo un control
+            exhaustivo del fujo de efectivo y el estado de cuentas.
+          </p>
+        </p>
+        <FeaturesCard title="Utilidades">
+          <li><p>Pago de deudas</p></li>
+          <li><p>Consulta de recibos</p></li>
+        </FeaturesCard>
+        <p>
+          Ingrese a
+          <a href="/cajero/finanzas" class="text-link">Finanzas</a>
+          en la sección Cajero para consultar sobre más movimientos financieros dentro
+          de la sucursal.
+        </p>
+      </Section>
+
+      <Section id="finanzas-cxpagar">
+        <h2>Cuentas por pagar</h2>
+        <p>
+          Permite llevar el registro de los pagos pendientes con proveedores y cumplir con
+          las obligaciones financieras y evitar incumplimientos en los plazos de pago.
+        </p>
+        <p>
+          El sistema permite registrar pagos parciales o totales de las deduas. Además de
+          el acceso al registro de todas las transacciones realizadas con cada proveedor,
+          incluyendo pagos realizados, fechas y notas de crédito aplicadas.
+        </p>
+      </Section>
+
+      <Section id="cxpagar-estados-cuenta">
+        <h3>Estados de cuenta</h3>
+        <p>
+          Facilita el seguimiento financiero de las cuentas con los proveedores, ofreciendo
+          reportes que muestran todas las transacciones, pagos realizados y saldos pendientes.
+        </p>
+        <p>
+          Registre los pagos totales o parciales, además del método de pago utilizado y notas
+          de crédito en caso de contar con saldos a favor.
+        </p>
+        <Supademo title="¿Cómo administrar estados de cuenta?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm3g39hov10aj128vkrlpul1u?embed_v=2" loading="lazy" title="Estados de cuenta" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="cxpagar-abonos">
+        <h3>Abonos</h3>
+        <p>
+          Se muestra un registro detallado con las fechas de las transacciones realizadas
+          con cada proveedor. Consulte los movimientos e imprima documentos con la información
+          de cada pago.
+        </p>
+        <Supademo title="¿Cómo gestionar abonos?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm3g40cst10r1128v7z6gk24y?embed_v=2" loading="lazy" title="Abonos" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="cxpagar-recibos-anulados">
+        <h3>Abonos anulados</h3>
+        <p>
+          Gestiona transacciones que han sido revertidas o corregidas debido a errores
+          o cancelaciones. Esto asegura que las finanzas reflejen únicamente transacciones
+          válidas.
+        </p>
+        <p>
+          El sistema lleva el control del historial con todas las anulaciones realizadas,
+          incluyendo fecha y hora de anulación y motivo registrado.
+        </p>
+        <Supademo title="¿Cómo consultar recibos anulados?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm3g4g7yo11fn128vy53j2vs0?embed_v=2" loading="lazy" title="New Demo" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+  </ColumnsLayout>
+</Layout>

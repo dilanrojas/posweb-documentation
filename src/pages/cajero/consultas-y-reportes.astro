@@ -1,0 +1,36 @@
+---
+import FeaturesCard from "@components/FeaturesCard.astro";
+import Layout from "@layouts/Layout.astro";
+import ColumnsLayout from "@layouts/ColumnsLayout.astro";
+import Section from "@components/Section.astro";
+---
+
+<Layout title='Consultas y Reportes'>
+  <ColumnsLayout>
+      <Section>
+        <h1>Consultas y Reportes</h1>
+        <p>
+          Proporciona al cajero un acceso a los movimientos realizados con el dispositivo pinpad.
+          Este sistema permite supervisar y analizar las transacciones ejecutadas. Los reportes
+          incluyen información sobre los pagos procesados y cualquier actividad asociada.
+        </p>
+        <FeaturesCard title="Funcionalidad clave">
+          <li><p>Seguimiento de operaciones pinpad</p></li>
+        </FeaturesCard>
+        <p>
+          Brinda herramientas útiles para determinar si los moivmientos se han efectuado
+          correctamente o de lo contrario, se deben realizar ajustes en el sistema.
+        </p>
+      </Section>
+
+      <Section id="consultas-pinpad">
+        <h2>Pinpad</h2>
+        <p>
+          Facilita el registro completo de las interacciones realizadas con el dispositivo.
+          Esto incluye el historial de peticiones, respuestas recibidas y el cierre.
+          Esta funcionalidad asegura un control sobre las operaciones con el dispositivo,
+          ofreciendo información para la resolución de incidencias.
+        </p>
+      </Section>
+    </ColumnsLayout>
+</Layout>

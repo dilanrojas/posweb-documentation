@@ -1,0 +1,113 @@
+---
+import FeaturesCard from "@components/FeaturesCard.astro";
+import Layout from "@layouts/Layout.astro";
+import ColumnsLayout from "@layouts/ColumnsLayout.astro";
+import Section from "@components/Section.astro";
+import Supademo from "@components/Supademo";
+---
+
+<Layout title='Productos'>
+  <ColumnsLayout>
+      <Section>
+        <h1>Productos</h1>
+        <p>
+          El apartado de productos permite la administración de todos los bienes
+          y/o servicios que una empresa comercializa. Este módulo permite registrar
+          cada producto con detalles precisos.
+        </p>
+        <FeaturesCard title="Beneficios clave">
+          <li><p>Nombre y descripción</p></li>
+          <li><p>Código de barras</p></li>
+          <li><p>Costos y márgenes</p></li>
+          <li><p>Organización por categorías</p></li>
+        </FeaturesCard>
+        <p>
+          El objetivo es que la empresa tenga un control exhaustivo de cada artículo
+          que vende, y el software, pueda generar automáticamente informes de inventario,
+          ventas y rentabilidad.
+        </p>
+      </Section>
+
+      <Section id="categorias">
+        <h2>Categorías</h2>
+        <p>
+          La categorización de productos permite clasificar artículos por tipo, como ropa,
+          tecnología o alimentos. Facilitando no solo el proceso de ventas, sino también
+          el servicio al cliente al hacer más ágil y eficiente la atención.
+        </p>
+        <p>
+          Además, esta organización permite generar reportes detallados por categoría, lo
+          que ayuda a analizar el rendimiento y las ventas de cada grupo de productos.
+        </p>
+        <Supademo title="¿Cómo crear categorías?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 2.1112828438948994; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm2t95f7914f9gyttkjqlqrjx?embed_v=2" loading="lazy" title="Productos (Categorías) POSWEB" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="sub-categorias">
+        <h2>Sub categorías</h2>
+        <p>
+          Las subcategorías permiten una clasificación más precisa y detallada dentro de las
+          categorías principales, lo que facilita la organización y el manejo del inventario.
+          Por ejemplo, dentro de la categoría "Ropa", se pueden crear subcategorías como
+          "Camisetas", "Pantalones" o "Chaquetas", lo que mejora la segmentación de productos.
+        </p>
+        <p>
+          Recuerde que, para crear subcategorías, primero debe contar con una categoría principal
+          ya creada, a la que podrá asignar la nueva división.
+        </p>
+        <Supademo title="¿Cómo crear sub categorías?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 2.1112828438948994; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm2ta6wod14uygyttqqxzlxnc?embed_v=2" loading="lazy" title="Subcategorías POSWEB" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="unidades">
+        <h2>Unidades</h2>
+        <p>
+          Las unidades definen cómo se mide y gestiona el inventario de los productos. Dependiendo
+          del tipo de negocio, un producto puede medirse en piezas, kilogramos, litros, metros, entre
+          otros. Este apartado es esencial para garantizar que la contabilidad y el inventario sean
+          precisos al gestionar las ventas.
+        </p>
+        <p>
+          Además, al definir correctamente las unidades de medida, se asegura exactitud en las ventas,
+          evitando errores en el registro de produtos y garantizando que se vendan en las cantidades correctas.
+        </p>
+        <Supademo title="¿Cómo añadir unidades?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 2.1112828438948994; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm2targ0j151ggyttypqfi8y6?embed_v=2" loading="lazy" title="Unidades Productos" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="tallas">
+        <h2>Tallas</h2>
+        <p>
+          Este apartado es especialmente útil para empresas que manejan productos con variaciones en sus
+          dimensiones o tamaños, como ropa, calzado o artículos deportivos. Las tallas permiten al sistema
+          gestionar múltiples variantes de un mismo producto, manteniendo un control preciso de las existencias
+          y las ventas de cada talla.
+        </p>
+        <p>
+          Este sistema es esencial para evitar errores en la venta y garantizar que el inventario siempre
+          refleje la cantidad correcta de productos en cada variación.
+        </p>
+        <Supademo title="¿Cómo agregar tallas?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 2.1112828438948994; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm2tb72mr15c1gyttfsdmyspo?embed_v=2" loading="lazy" title="Tallas" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="catalogo">
+        <h2>Catálogo de productos</h2>
+        <p>
+          Permite el registro de productos con información como el código de barras, categoría,
+          porcentaje IVA y código CABYS. El sistema cuenta con una utilidad para consultar por el
+          código CABYS correspondiente al producto.
+        </p>
+        <p>
+          Además, puede ingresar productos de manera masiva utilizando cargas desde archivos XLS.
+        </p>
+        <Supademo title="¿Cómo organizar el catálogo?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm3yye12c0g9110a5fjzrvslk?embed_v=2" loading="lazy" title="Catálogo de productos" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+  </ColumnsLayout>
+</Layout>

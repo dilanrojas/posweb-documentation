@@ -1,0 +1,126 @@
+---
+import PhoneIcon from "@icons/PhoneIcon.astro"
+import CorreosIcon from "@icons/CorreosIcon.astro"
+
+import { adminElements } from "@consts/adminElements"
+import { adminBranchElements } from "@consts/adminElements"
+import { cashierElements } from "@consts/cashierElements"
+---
+
+<footer
+  class="primary-footer wrapper"
+  style="--custom-width: 1200px; --custom-padding: 0rem;"
+>
+  <nav class="admin-links">
+    <h3>
+      <a href="/admin/productos" class="footer-item">Administrador</a>
+    </h3>
+    <ul>
+      {adminElements && adminElements.map(({ label, href }) => (
+        <li>
+          <a href={href} class="footer-item">
+            <span>{label}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+  <nav class="admin-branch-links">
+    <h3>
+      <a href="/admin/sucursal/inventario" class="footer-item">Sucursal</a>
+    </h3>
+    <ul>
+      {adminBranchElements && adminBranchElements.map(({ label, href }) => (
+        <li>
+          <a href={href} class="footer-item">
+            <span>{label}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+  <nav class="cajero-links">
+    <h3>
+      <a href="/admin/productos" class="footer-item">Cajero</a>
+    </h3>
+    <ul>
+      {cashierElements && cashierElements.map(({ label, href }) => (
+        <li>
+          <a href={href} class="footer-item">
+            <span>{label}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+  <nav class="contact">
+    <h3>Contacto</h3>
+    <ul>
+      <li><p class="footer-item"><PhoneIcon />(506) 4052-4040</p></li>
+      <li><p class="footer-item"><CorreosIcon />soporte@softdialcr.com</p></li>
+    </ul>
+  </nav>
+</footer>
+
+<style>
+  .primary-footer {
+    margin-top: 3em;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
+    flex-wrap: wrap;
+    font-size: .8em!important;
+    padding-block: 4em;
+    flex-wrap: wrap;
+
+    & h1 {
+      margin-bottom: 1em;
+    }
+
+    & ul > * + * {
+      margin-top: .9em;
+    }
+  }
+
+
+  @media (width <= 750px) {
+    .primary-footer { grid-template-columns: repeat(2, 1fr) }
+  }
+
+  @media (width <= 520px) {
+    .primary-footer {
+      font-size: .75em;
+      gap: 2.8em 2em;
+    }
+
+  }
+
+  .footer-item {
+    display: flex;
+    align-items: center;
+    gap: .8em;
+    width: fit-content;
+    transition: color .1s ease-in-out;
+
+    &:hover:not(p) {
+      color: var(--accent)
+    }
+  }
+  
+  .primary-footer a :not(h3) {
+    font-size: 1.2em;
+  }
+
+  .primary-footer h3 {
+    font-size: 1.3em;
+    margin-bottom: 1rem;
+  }
+
+</style>
+
+<style is:global>
+  .primary-footer svg {
+    width: 14px;
+  }
+</style>

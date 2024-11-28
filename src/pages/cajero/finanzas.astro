@@ -1,0 +1,142 @@
+---
+import FeaturesCard from "@components/FeaturesCard.astro";
+import Layout from "@layouts/Layout.astro";
+import ColumnsLayout from "@layouts/ColumnsLayout.astro";
+import Section from "@components/Section.astro";
+import Supademo from "@components/Supademo";
+---
+
+<Layout title='Finanzas'>
+  <ColumnsLayout>
+      <Section>
+        <h1>Finanzas</h1>
+        <p>
+          Esencial para la gestión general de finanzas en la empresa. Tiene acceso
+          a información clave sobre la situación financiera del negocio, controlando
+          el flujo de efectivo y asegurando que todas las transacciones estén
+          debidamente registradas.
+        </p>
+        <FeaturesCard title="Funciones">
+          <li><p>Registro de ingresos y egresos</p></li>
+          <li><p>Revisión de cuentas por pagar y cobrar</p></li>
+          <li><p>Control de la caja</p></li>
+        </FeaturesCard>
+        <p>
+          Realiza la conciliación de los movimientos financieros fácilmente desde esta
+          sección. Permitiendo un control claro sobre deudas y pagos pendientes.
+        </p>
+      </Section>
+
+      <Section id="finanzas-caja">
+        <h2>Caja</h2>
+        <p>
+          Herramienta donde el cajero tiene el control de los movimientos financieros diarios
+          en el
+          <a href="/admin/sucursal/configuraciones#sucursal-puntos-venta" class="text-link">Punto de venta</a>.
+          Aquí se registran todos los ingresos provenientes de ventas, pagos de servicios o
+          cualquier otra operación que implique la entrada o salida de dinero.
+        </p>
+        <p>
+          Permite cierre y apertura de caja. Durante el cierre, se realiza el recuento de
+          pagos en tarjeta, efectivo y otros medios para asegurar que todos
+          los registros se hayan realizado correctamente.
+        </p>
+        <Supademo title="¿Cómo abrir una nueva caja?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7786458333333333; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm38wcucb01c0h5abliytw5p3?embed_v=2" loading="eager" title="Abrir caja" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="finanzas-cxcobrar">
+        <h2>Cuentas por cobrar</h2>
+        <p>
+          Gestiona los pagos pendientes que los clientes deben realizar por productos o
+          servicios adquiridos.
+        </p>
+        <p>
+          El sistema muestra un listado con todas las cuentas pendientes de cobro, con
+          detalles sobre los clientes, montos y fechas límites de pago.
+        </p>
+      </Section>
+      
+      <Section id="cxcobrar-estados-cuenta">
+        <h3>Estados de cuenta</h3>
+        <p>
+          Genera reportes detallados sobre el estado financiero de cada cliente, permitiendo
+          un seguimiento claro de las transacciones realizadas, los pagos recibidos y saldos
+          pendientes.
+        </p>
+        <p>
+          Los abonos generados en este apartado se pueden ver en el módulo de recibos.
+        </p>
+        <Supademo title="¿Cómo gestionar estados de cuenta?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm3g53eo7122d128vyau2l7rd?embed_v=2" loading="lazy" title="Estados de cuenta" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="cxcobrar-recibos">
+        <h3>Recibos</h3>
+        <p>
+          Esencial para documentar y registrar de manera formal los pagos que se realizan.
+          Cada vez que un cliente paga, el sistema genera un recibo que sirve como comprobante
+          tanto para la empresa, como para el cliente.
+        </p>
+        <p>
+          Los recibos anulados se pueden consultar únicamente desde el módulo recibos anulados.
+        </p>
+        <Supademo title="¿Cómo consultar y anular recibos?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm3g5ji8z12aq128vbwx712dg?embed_v=2" loading="lazy" title="Recibos" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="cxcobrar-recibos-anulados">
+        <h3>Recibos anulados</h3>
+        <p>
+          Registra cualquier anulación de recibos en caso de errores o cancelaciones. El
+          cajero puede revisar los recibos que han sido anulados y asegurarse de que las
+          transacciones se corrijan en el sistema.
+        </p>
+        <p>
+          Todos los recibos anulados se registran proporcionando un historial que puede ser
+          consultado en cualquier momento.
+        </p>
+        <Supademo title="¿Cómo verificar recibos anulados?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm3g5wu6y12ev128vllot68d4?embed_v=2" loading="lazy" title="Recibos anulados" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="finanzas-otros-ingresos">
+        <h2>Otros ingresos</h2>
+        <p>
+          Permite al cajero registrar ingresos adicionales de efectivo que no están relacionados
+          directamente con la venta de productos o servicios. Esto podría incluir, por
+          ejemplo, ingresos por alquileres, monedas o cualquier otro tipo de ingreso
+          extra.
+        </p>
+        <p>
+          Se admite el ingreso manual de cualquier ingreso adicional dentro de las opciones
+          proporcionadas por el administrador en
+          <a href="/admin/configuraciones#finanzas-ingresos" class="text-link">Tipos de ingresos</a>.
+        </p>
+        <Supademo title="¿Cómo registrar otros ingresos?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7786458333333333; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm394k2i004rvh5abt2xix2ks?embed_v=2" loading="lazy" title="Otros ingresos" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="finanzas-otros-egresos">
+        <h2>Otros egresos</h2>
+        <p>
+          Lleva el registro de egresos adicionales que no pertenecen a las operaciones
+          principales de la empresa, como retiros de efectivo, caja chica o pagos varios.
+        </p>
+        <p>
+          El registro de otros egresos puede ser realizado manualmente de acuerdo a los
+          parámetros establecidos en
+          <a href="/admin/configuraciones#finanzas-egresos" class="text-link">Tipos de egresos</a>
+          por el administrador, asegurando que todos los movimientos quedan documentados.
+        </p>
+        <Supademo title="¿Cómo gestionar otros egresos?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7786458333333333; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm39a50kl06psh5aby91zt1dj?embed_v=2" loading="lazy" title="Otros egresos" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+  </ColumnsLayout>
+</Layout>

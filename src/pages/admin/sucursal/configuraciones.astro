@@ -1,0 +1,170 @@
+---
+import FeaturesCard from "@components/FeaturesCard.astro";
+import Layout from "@layouts/Layout.astro";
+import ColumnsLayout from "@layouts/ColumnsLayout.astro";
+import Section from "@components/Section.astro";
+import Supademo from "@components/Supademo";
+---
+
+<Layout title='Configuraciones Sucursal'>
+  <ColumnsLayout>
+      <Section>
+        <h1>Configuraciones - Sucursal</h1>
+        <p>
+          Gestiona parámetros para asegurar el funcionamiento adecuado según
+          las actividades realizadas en cada sucursal.
+        </p>
+        <FeaturesCard title="Gestiona">
+          <li><p>Registro de usuarios en sistema</p></li>
+          <li><p>Registro de profesionales</p></li>
+          <li><p>Registro de vendedores</p></li>
+          <li><p>Administración de puntos de venta</p></li>
+          <li><p>Categorización</p></li>
+        </FeaturesCard>
+        <p>
+          Establece valores que utilizarán los cajeros para realizar todo tipo
+          de movimientos financieros y registros en el sistema.
+        </p>
+      </Section>
+
+      <Section id="sucursal-usuarios">
+        <h2>Usuarios</h2>
+        <p>
+          Gestiona a todas las personas que tienen acceso al sistema y sus niveles
+          de acceso.
+        </p>
+        <p>
+          El acceso al sistema se permite asigando credenciales a cada usuario. Estas
+          credenciales pueden ser configuradas nuevamente en cualquier momento.
+        </p>
+        <Supademo title="¿Cómo añadir usuarios en sucursal?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm38w2qiw0156h5abfc2d7vd9?embed_v=2" loading="lazy" title="Usuarios" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="sucursal-profesionales">
+        <h2>Profesionales</h2>
+        <p>
+          Registra a los empleados o colaboradores que ofrecen servicios, como técnicos,
+          consultores o profesionales en áreas específicas.
+        </p>
+        <p>
+          El sistema puede calcular y gestionar automáticamente las comisiones a pagar
+          por los servicios realizados, según el porcentaje indicado por el administrador.
+        </p>
+        <Supademo title="¿Cómo inscribir profesionales?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm38wfn2v01c2h5ab00a4omm5?embed_v=2" loading="lazy" title="Profesionales" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="sucursal-vendedores">
+        <h2>Vendedores</h2>
+        <p>
+          El administrador puede crear perfiles para cada vendedor, asociando sus datos
+          de contacto, identificación y más información relevante.
+        </p>
+        <p>
+          Cada venta puede ser registrada bajo el nombre del vendedor responsable, lo que
+          permite llevar un control individualizado de ventas y comisiones.
+        </p>
+        <Supademo title="¿Cómo ingresar vendedores?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm38xytp802awh5abeh6rjdcl?embed_v=2" loading="lazy" title="Vendedores" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="sucursal-puntos-venta">
+        <h2>Puntos de venta</h2>
+        <p>
+          Se admite el registro de múltiples puntos de venta dentro el sistema. Cada punto
+          puede tener su propia configuración específica, como impresoras, terminales Pinpad y
+          catálogo de productos.
+        </p>
+        <p>
+          Cada punto de venta puede estar vinculado a determinados usuarios o vendedores,
+          permitiendo una gestión precisa de los trabajadores en cada tienda o ubicación.
+        </p>
+        <Supademo title="¿Cómo añadir puntos de venta?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm38yhm9m02ish5abvlicdlaz?embed_v=2" loading="lazy" title="Puntos de venta" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="sucursal-pinpad-terminals">
+        <h2>Pinpad terminals</h2>
+        <p>
+          Administra los terminales de pago que están conectados al sistema de punto
+          de venta.
+        </p>
+        <p>
+          A través de este apartado, los terminales de pago pueden estar vinculados
+          a procesadores de pago específicos, para facilitar transacciones con tarjetas
+          de débito o crédito.
+        </p>
+        <Supademo title="¿Cómo incorporar Pinpad terminals?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm38yzyoi02obh5abgpdd4a7w?embed_v=2" loading="lazy" title="Pinpad Terminals" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="sucursal-impresoras">
+        <h2>Impresoras POS</h2>
+        <p>
+          El sistema permite configurar las impresoras que se usan en cada punto de venta.
+        </p>
+        <p>
+          Cada impresora puede ser asignada a uno de ellos, lo que permite controlar qué
+          impresora se utilizará para cumplir con las tareas de cada punto de venta.
+        </p>
+        <Supademo title="¿Cómo añadir impresoras?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm38zmmq50326h5absjbxgf10?embed_v=2" loading="lazy" title="New Demo" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="sucursal-vehiculos">
+        <h2>Vehículos</h2>
+        <p>
+          Útil para empresas que gestionan flotas de transporte o vehículos.
+        </p>
+        <p>
+          Permite organizar el catálogo de marcas y modelos que serán utilizados
+          posteriormente para el registro de vehículos dentro del punto de venta.
+        </p>
+      </Section>
+
+      <Section id="sucursal-vehiculos-marcas">
+        <h3>Marcas</h3>
+        <p>
+          Agrega marcas de vehículos para mantener un orden en el registro.
+        </p>
+        <Supademo title="¿Cómo ingresar marcas?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm38zukl6034bh5abvf31aj9k?embed_v=2" loading="lazy" title="Vehículos - Marcas" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="sucursal-vehiculos-modelos">
+        <h3>Modelos</h3>
+        <p>
+          Registra modelos para las marcas creadas anteriormente, garantizando
+          un registro más específico.
+        </p>
+        <Supademo title="¿Cómo ingresar modelos?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm39026ce036zh5abhyl3iyve?embed_v=2" loading="lazy" title="Vehículos - Modelos" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="sucursal-configuracion">
+        <h2>Configuración sucursal</h2>
+        <p>
+          Lleva un control de los datos registrados para la sucursal. Como el nombre
+          comercial, información de contacto o dirección física.
+        </p>
+        <p>
+          Además, puede configurar comportamientos por defecto del sistema, como
+          formatos de impresión, permitir búsquedas por diferentes parámetros y
+          la utilización de valores por defecto para ventas como un cliente para
+          compras de contado y la actividad económica a utilizar.
+        </p>
+        <Supademo title="¿Cómo configurar sucursales?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm390f0lb039ah5abhe3vwtn2?embed_v=2" loading="lazy" title="Configuración - Sucursal" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+  </ColumnsLayout>
+</Layout>

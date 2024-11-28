@@ -1,0 +1,46 @@
+---
+import FeaturesCard from "@components/FeaturesCard.astro";
+import Layout from "@layouts/Layout.astro";
+import ColumnsLayout from "@layouts/ColumnsLayout.astro";
+import Section from "@components/Section.astro";
+import Supademo from "@components/Supademo";
+---
+
+<Layout title='Ordenes de trabajo'>
+  <ColumnsLayout>
+      <Section>
+        <h1>Ordenes de trabajo</h1>
+        <p>
+          Gestiona los servicios o trabajos que los clientes solicitan, ofreciendo un flujo
+          de trabajo eficiente que permite planificar, asignar y seguir el progreso de cada
+          orden hasta su finalización.
+        </p>
+        <FeaturesCard title="Herramientas">
+          <li><p>Creación de órdenes</p></li>
+          <li><p>Registra datos de cliente y vehículo</p></li>
+          <li><p>Desglose de tareas</p></li>
+          <li><p>Estimación de costos</p></li>
+        </FeaturesCard>
+        <p>
+          El sistema permite asociar cada orden de trabajo con la información del cliente con
+          los datos del vehículo o equipo a ser reparado o mantenido. Además del profesional
+          asignado.
+        </p>
+      </Section>
+
+      <Section id="nueva-orden-trabajo">
+        <h2>Nueva orden de trabajo</h2>
+        <p>
+          Distribuye eficientemente las órdenes de trabajo entre los diferentes trabajadores,
+          equipos o áreas responsables de llevar a cabo el servicio.
+        </p>
+        <p>
+          Crucial para la organización interna de la empresa, asegurando que los recursos humanos
+          y materiales sean asignados adecuadamente según especialización y carga de trabajo.
+        </p>
+        <Supademo title="¿Cómo añadir ordenes de trabajo?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7786458333333333; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm34lx7va0bjhad3xx3ke8sdq?embed_v=2" loading="lazy" title="Ordenes de trabajo" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+  </ColumnsLayout>
+</Layout>

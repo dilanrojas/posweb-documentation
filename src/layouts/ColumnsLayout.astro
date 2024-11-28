@@ -1,0 +1,78 @@
+---
+import Sidebar from "@components/Sidebar.astro"
+import OnThisPage from "@components/OnThisPage"
+import Footer from "@components/Footer.astro"
+import NextPrevPage from "@components/NextPrevPage"
+
+const { pathname } = Astro.url
+const normalizedPathName =
+  pathname.length > 1 && pathname.endsWith("/")
+    ? pathname.slice(0, -1) : pathname
+---
+
+
+<div class="columns-layout wrapper">
+  <Sidebar />
+  <main class="wrapper">
+    <slot />
+    <NextPrevPage pathname={normalizedPathName} client:load />
+    <Footer />
+  </main>
+  <OnThisPage pathname={normalizedPathName} client:load />
+</div>
+
+<style is:global>
+  .columns-layout {
+		--custom-width: 1600px;
+		--custom-padding: .7rem;
+
+    --sidebar: 310px;
+    --index-menu: 310px;
+
+    position: relative;
+    display: grid;
+    grid-template-columns: var(--sidebar) auto var(--index-menu);
+    grid-template-areas: 'sidebar main on-this-page';
+
+    --top-padding: 90px;
+    & .sidebar    { padding-top: var(--top-padding) }
+    & .on-this-page { padding-top: var(--top-padding) }
+    & main        {
+      --custom-padding: 2.5rem;
+      padding-top: var(--top-padding);
+    }
+  }
+
+  @media (width <= 1080px) {
+    .columns-layout main {
+      --custom-padding: 1rem;
+    }
+  }
+
+  @media (width <= 700px) {
+    .columns-layout main {
+      --custom-padding: .4rem;
+    }
+  }
+
+  .sidebar { grid-area: sidebar }
+  .on-this-page-wrapper { grid-area: on-this-page }
+
+	@-moz-document url-prefix() {
+		.on-this-page {
+		}
+	}
+
+  .columns-layout > main {
+    grid-area: main;
+    & > * + * { margin-top: 2.5em }
+  }
+
+  @media (width <= 1350px) {    
+    .columns-layout { grid-template-areas: 'sidebar main main' }
+  }
+
+  @media (width <= 1080px) {
+    .columns-layout { grid-template-columns: 1fr; }
+  }
+</style>

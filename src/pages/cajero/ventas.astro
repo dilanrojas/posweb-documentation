@@ -1,0 +1,95 @@
+---
+import FeaturesCard from "@components/FeaturesCard.astro";
+import Layout from "@layouts/Layout.astro";
+import ColumnsLayout from "@layouts/ColumnsLayout.astro";
+import Section from "@components/Section.astro";
+import Supademo from "@components/Supademo";
+---
+
+<Layout title='Ventas'>
+  <ColumnsLayout>
+      <Section>
+        <h1>Ventas</h1>
+        <p>
+          Es el núcleo del trabajo diario del cajero. Aquí se registran todas las transacciones
+          comerciales, tanto de productos como de servicios, permitiendo un control en tiempo
+          real del flujo de ingresos.
+        </p>
+        <FeaturesCard title="Utilidades">
+          <li><p>Registro de ventas diarias</p></li>
+          <li><p>Múltiples métodos de pago</p></li>
+          <li><p>Emisión de facturas</p></li>
+        </FeaturesCard>
+        <p>
+          Facilita el flujo de caja y lleva el registro preciso de ventas. Además de cumplir
+          con las normativas fiscales establecidas.
+        </p>
+      </Section>
+
+      <Section id="ventas-clientes">
+        <h2>Clientes</h2>
+        <p>
+          Permite crear y gestionar una base de datos de clientes dentro del sistema,
+          lo que facilita la personalización del servicio y la administración de las
+          cuentas por cobrar, descuentos o ventas a crédito.
+        </p>
+        <p>
+          Cada cliente tiene un historial de compras que el cajero puede consultar para
+          ofrecer un mejor servicio o verificar datos relevantes.
+        </p>
+        <Supademo title="¿Cómo registrar clientes?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm37jl6ou0f712xleydny2foy?embed_v=2" loading="lazy" title="New Demo" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="ventas-cotizaciones">
+        <h2>Cotizaciones</h2>
+        <p>
+          Herramienta útil para generar presupuestos o estimaciones previas para los clientes
+          antes de concretar una venta.
+        </p>
+        <p>
+          Puede generar cotizaciones detalladas, incluyendo productos, servicios, impuestos
+          y descuentos. Ofreciendo al cliente una visión clara de los costos antes de proceder
+          con la compra.
+        </p>
+        <Supademo title="¿Cómo realizar cotizaciones?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm3xc1l8k0ogy10dnkeoiz0hn?embed_v=2" loading="lazy" title="Cotizaciones" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="ventas-nueva-venta">
+        <h2>Nueva venta</h2>
+        <p>
+          En esta sección el cajero podrá registrar todas las ventas que se realizan en el
+          día, ya sea por productos, servicios o ambos. Estas ventas pueden ser tanto
+          ser registradas con múltiples métodos de pago, de contado o crédito.
+        </p>
+        <p>
+          Recuerde realizar la
+          <a href="/cajero/finanzas#finanzas-caja" class="text-link">Apertura de caja</a>
+          para poder registrar ventas en el sistema.
+        </p>
+        <Supademo title="¿Cómo registrar ventas?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7786458333333333; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm39akduq06rth5abp4osy2pt?embed_v=2" loading="lazy" title="Ventas" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="ventas-notas-credito">
+        <h2>Notas de crédito</h2>
+        <p>
+          Esencial para corregir errores en las ventas o gestionar devoluciones de productos.
+          Permite al cajero emitir y administrar notas de crédito que compensen o corrijan
+          transacciones anteriores.
+        </p>
+        <p>
+          Las notas de crédito pueden aplicarse a futuras compras del cliente, permitiendo
+          que el saldo a favor sea utilizado como parte del pago en una nueva
+          transacción.
+        </p>
+        <Supademo title="¿Cómo gestionar notas de crédito?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm4014h600xsj10a5kbpwgjsg?embed_v=2" loading="lazy" title="Notas de crédito" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+  </ColumnsLayout>
+</Layout>

@@ -1,0 +1,64 @@
+---
+import FeaturesCard from "@components/FeaturesCard.astro";
+import Layout from "@layouts/Layout.astro";
+import ColumnsLayout from "@layouts/ColumnsLayout.astro";
+import Section from "@components/Section.astro";
+import Supademo from "@components/Supademo";
+---
+
+<Layout title='Gestión de agenda'>
+  <ColumnsLayout>
+      <Section>
+        <h1>Gestión de agenda</h1>
+        <p>
+          Herramienta que permite administrar todas las citas, servicios y tareas que la
+          empresa tiene programadas. Su función principal es permitir al cajero o al
+          personal administrativo organizar de manera eficiente los tiempos disponibles.
+        </p>
+        <FeaturesCard title="Utilidades">
+          <li><p>Bloques de tiempo</p></li>
+          <li><p>Visualización global de agenda</p></li>
+          <li><p>Administración de horas disponibles</p></li>
+          <li><p>Creación de horario</p></li>
+        </FeaturesCard>
+        <p>
+          Se muestran todas las citas y órdenes programadas en un formato de calendario
+          o cronograma, permitiendo una vista clara y general de las actividades de la
+          empresa.
+        </p>
+      </Section>
+
+      <Section id="gestion-crear-agenda">
+        <h2>Crear agenda</h2>
+        <p>
+          Crea nuevas agendas de trabajo para los empleados o recursos de la empresa,
+          planificando de forma detallada los horarios y tareas a realizar.
+        </p>
+        <p>
+          Estos bloques se pueden definir de acuerdo a los turnos de trabajo del personal,
+          los horarios de disponibilidad de los recursos o la demanda de los clientes.
+        </p>
+        <Supademo title="¿Cómo crear bloques de agenda?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm3nkg2930vheqdk94uwrrvf9?embed_v=2" loading="lazy" title="Crear agenda" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="gestion-gestionar-agenda">
+        <h2>Gestionar agenda</h2>
+        <p>
+          Encargado de la gestión continua de la agenda, donde el cajero o administrador
+          verifica y ajusta los bloques de tiempo, asegurándose de que las
+          actividades programadas estén correctas y puedan ser ejecutadas sin
+          inconvenientes.
+        </p>
+        <p>
+          Solicite al administrador una
+          <a href="/admin/configuraciones#configuracion-reservas-servicios" class="text-link">URL para reservas</a>,
+          lo que permitirá a sus clientes agendar fácilmente citas y realizar consultas relacionadas.
+        </p>
+        <Supademo title="¿Cómo gestionar los bloques de agenda?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm3nlfcy200cyahfjf43ntx30?embed_v=2" loading="lazy" title="Gestionar agenda" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+  </ColumnsLayout>
+</Layout>

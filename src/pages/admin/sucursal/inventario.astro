@@ -1,0 +1,131 @@
+---
+import FeaturesCard from "@components/FeaturesCard.astro";
+import Layout from "@layouts/Layout.astro";
+import ColumnsLayout from "@layouts/ColumnsLayout.astro";
+import Section from "@components/Section.astro";
+import Supademo from "@components/Supademo";
+---
+
+<Layout title='Inventario'>
+  <ColumnsLayout>
+      <Section>
+        <h1>Inventario</h1>
+        <p>
+          Gestiona y organiza eficientemente todos los productos y servicios de la sucursal.
+          Esencial para llevar un control preciso de las existencias. Resulta útil para mantener
+          un flujo de productos adecuado, con un inventario actualizado.
+        </p>
+        <FeaturesCard title="Herramientas">
+          <li><p>Agregar productos y servicios</p></li>
+          <li><p>Manejo de transferencias</p></li>
+          <li><p>Salidas justificadas</p></li>
+          <li><p>Tomas físicas de inventario</p></li>
+          <li><p>Datos actualizados</p></li>
+        </FeaturesCard>
+        <p>
+          Este módulo facilita la administración del inventario en sucursales, lo que contribuye
+          a una mejor administración en las mismas con un panorama claro de los movimientos
+          disponibles.
+        </p>
+      </Section>
+
+      <Section id="inventario-productos">
+        <h2>Productos</h2>
+        <p>
+          Registra y gestiona todos los artículos disponbles en el inventario de la sucursal.
+          A través de esta herramienta, es posible agregar nuevos productos y actualizar la
+          información existente.
+        </p>
+        <p>
+          Permite cambiar el estado de los productos agregados a inventario, eliminar productos
+          no deseados y calcular margenes de ganancia.
+        </p>
+        <p>
+          Realice ingresos masivos de productos con tablas XLS utilizando la herramienta
+          "Inventariar desde XLS" disponible en
+          <a href="/admin/productos#catalogo" class="text-link">Catálogo de productos</a>.
+        </p>
+        <Supademo title="¿Cómo añadir productos a inventario?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm37mk1630g042xle93d57iu5?embed_v=2" loading="lazy" title="Productos" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="inventario-servicios">
+        <h2>Servicios</h2>
+        <p>
+          Administra todos los servicios que la sucursal ofrece. Especialmente útil para empresas
+          que ofrecen consultorías, soporte técnico, reparaciones u otros servicios. Tiene la
+          posibilidad de agregar servicios, modificar su estado y disponibilidad.
+        </p>
+        <p>
+          Optimiza el control administrativo, con un registro ordenado de los servicios
+          disponibles en la sucursal.
+        </p>
+        <Supademo title="¿Cómo agregar servicios en sucursal?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm37n1y7k0g2w2xletm3mcq3c?embed_v=2" loading="lazy" title="Servicios" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="inventario-transferencias">
+        <h2>Transferencias</h2>
+        <p>
+          Gestiona los movimientos de inventario que implican una salida o reubicación de productos.
+          Permite el registro adecuado de transferencias para llevar el control de las mismas.
+        </p>
+        <p>
+          En caso de necesitar realizar una salida justificada, puede realizar el movimiento desde
+          este apartado. Esto garantiza la transparencia al momento de transladar artículos.
+        </p>
+      </Section>
+
+      <Section id="transferencias-nueva">
+        <h3>Nueva</h3>
+        <p>
+          Para realizar nuevas transferencias deberá indicar una sucursal destino. En caso
+          de realizar una salida sin sucursal destino (salida justificada), deberá indicar
+          el motivo de salida, ya sea por cortesía, pérdidas, garantías, entre otros.
+        </p>
+        <Supademo title="¿Cómo realizar transferencias?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm37ndzy00g8f2xleon23udgy?embed_v=2" loading="lazy" title="Transferencias - Nueva" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="transferencias-salidas">
+        <h3>Salidas</h3>
+        <p>
+          En caso de requerirlo, puede comprobar las transferencias realizadas anteriormente, con la
+          respectiva información. Además de imprimir un informe.
+        </p>
+        <Supademo title="¿Cómo comprobar las transferencias?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm37nswg20gie2xlebh53hldh?embed_v=2" loading="lazy" title="Transferencias - Salidas" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="transferencias-entradas">
+        <h3>Entradas</h3>
+        <p>
+          Compruebe los movimientos efectuados desde la sucursal destino. Contando con los datos
+          de los productos, cantidades, fecha y hora de la transferencia realizada.
+        </p>
+        <Supademo title="¿Cómo comprobar entradas?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm37r9vtp0hbf2xle6ravlfwy?embed_v=2" loading="lazy" title="New Demo" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+
+      <Section id="inventario-tomas-fisicas">
+        <h2>Tomas físicas</h2>
+        <p>
+          Mantener la información de los bienes y productos disponibles en inventario es
+          fundamental. Esta función le permite registrar dicho conteo físico y manejar datos
+          actualizados en el sistema.
+        </p>
+        <p>
+          Realice conteos por categoría, sub categoría y en todo el inventario. Actualice los
+          datos de acuerdo al conteo realizado y genere informes.
+        </p>
+        <Supademo title="¿Cómo realizar tomas físicas?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7777777777777777; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm37ruz5c0hfu2xle6aufl72d?embed_v=2" loading="lazy" title="Tomas físicas" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+  </ColumnsLayout>
+</Layout>

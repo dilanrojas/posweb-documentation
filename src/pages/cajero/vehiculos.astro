@@ -1,0 +1,46 @@
+---
+import FeaturesCard from "@components/FeaturesCard.astro";
+import Layout from "@layouts/Layout.astro";
+import ColumnsLayout from "@layouts/ColumnsLayout.astro";
+import Section from "@components/Section.astro";
+import Supademo from "@components/Supademo";
+---
+
+<Layout title='Vehículos'>
+  <ColumnsLayout>
+      <Section>
+        <h1>Vehículos</h1>
+        <p>
+          Especialmente útil para empresas que prestan servicios relacionados con automóviles,
+          ya que permite organizar y registrar la información relacionada con el vehículo
+          asignado a cada cliente.
+        </p>
+        <FeaturesCard title="Utilidades">
+          <li><p>Registro de vehículos</p></li>
+          <li><p>Categorización</p></li>
+          <li><p>Asignación a cada cliente</p></li>
+        </FeaturesCard>
+        <p>
+          Diseñado para gestionar de forma eficiente los automóviles o vehículos que pertenecen
+          a los clientes de la empresa.
+        </p>
+      </Section>
+
+      <Section id="nuevo-vehiculo">
+        <h2>Nuevo vehículo</h2>
+        <p>
+          Agrega y registra nuevos vehículos dentro del sistema. Esta función facilita la
+          entrada de información sobre los vehículos que pertenecen a los clientes y
+          asociarlos a sus perfiles en el sistema.
+        </p>
+        <p>
+          El sistema incluye campos específicos para ingresar la marca y modelos del vehículo.
+          Estos datos son esenciales para gestionar servicios o productos relacionados con dicho
+          vehículo.
+        </p>
+        <Supademo title="¿Cómo registrar vehículos?" client:visible>
+          <div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 1.7786458333333333; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cm33lflh101em343538pzi4j6?embed_v=2" loading="lazy" title="Vehículos" allow="clipboard-write" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+        </Supademo>
+      </Section>
+  </ColumnsLayout>
+</Layout>

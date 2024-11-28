@@ -1,0 +1,61 @@
+<div class="list-box">
+  <h1>Incluye</h1>
+  <ul class="features">
+    <li><p>Cotizaciones en moneda local</p></li>
+    <li><p>Control de cajas y cajeros, apertura y cierre de cajas</p></li>
+    <li><p>Inventario Multi-sucursal</p></li>
+    <li><p>Orden de compra y compras</p></li>
+    <li><p>Proveedores y cuentas por pagar</p></li>
+    <li><p>Órdenes de trabajo para cargar productos y servicios</p></li>
+    <li><p>Funciones para talleres mecánicos, lavacar y de reparaciones</p></li>
+    <li><p>Manejo de promociones por temporada</p></li>
+    <li><p>Envío de correos masivos con promociones</p></li>
+    <li><p>Carga de compras automáticas por medio de los XML de proveedores</p></li>
+  </ul>
+</div>
+
+<style>
+  .list-box {
+    background-color: var(--bg-primary);
+    border: 2px solid var(--bg-secondary);
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0 0 0 / .06);
+    padding: 3em;
+    text-align: left;
+    font-size: 1.15em;
+
+    & h1 {
+      text-align: left;
+      margin-bottom: 2em;
+    }
+  }
+  
+  .features {
+    columns: 2;
+    column-gap: 4em;
+    list-style-type: disc;
+    margin-left: 40px;
+
+    & > * + * {
+      margin-top: .3em;
+    }
+  }
+
+  @media (width <= 720px) {
+    .list-box {
+      padding: 1.3em;
+    }
+
+    .features {
+      columns: 1;
+      column-gap: 0em;
+      margin-left: 25px;
+    }
+  }
+
+  @media (width <= 700px) {
+    .list-box {
+      font-size: 1.3em;
+    }
+  }
+</style>

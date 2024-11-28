@@ -1,0 +1,135 @@
+---
+import VentasIcon from "@icons/VentasIcon.astro"
+import ComprasIcon from "@icons/ComprasIcon.astro"
+import CxcIcon from "@icons/CxcIcon.astro"
+import CxpIcon from "@icons/CxpIcon.astro"
+import Productos from "src/pages/admin/productos.astro"
+import ProductosIcon from "@icons/ProductosIcon.astro"
+---
+
+<div class="dashboard-grid">
+  <div class="ventas">
+    <div class="content">
+      <h1>Ventas</h1>
+    </div>
+    <VentasIcon />
+  </div>
+  <div class="compras">
+    <div class="content">
+      <h1>Compras</h1>
+    </div>
+    <ComprasIcon />
+  </div>
+  <div class="cxc">
+    <div class="content">
+      <h1>CxCobrar</h1>
+    </div>
+    <CxcIcon />
+  </div>
+  <div class="cxp">
+    <div class="content">
+      <h1>CxPagar</h1>
+    </div>
+    <CxpIcon />
+  </div>
+  <div class="stock">
+    <div class="content">
+      <h1>Stock</h1>
+    </div>
+    <ProductosIcon />
+  </div>
+</div>
+
+<style>
+  .dashboard-grid {
+    --transparency: .75;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: .5em;
+    font-size: 1.5em;
+    width: 100%;
+  
+    & > div {
+      grid-column: span 2;
+      position: relative;
+      border-radius: 10px;
+      cursor: default;
+      padding: 1.3em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.4em;
+      text-align: center;
+      box-shadow: 0px 0px 10px rgba(0 0 0 / .25);
+    }
+
+    & .cxp { grid-column: 2 / span 2 }
+  }
+
+  .content > * + * {
+    margin-top: .7em
+  }
+
+  .ventas {
+    background-color: hsla(96, 44%, 68%, var(--transparency))
+  }
+
+  .compras {
+    background-color: hsla(172, 39%, 65%, var(--transparency))
+  }
+
+  .cxc {
+    background-color: hsla(40, 62%, 73%, var(--transparency))
+  }
+
+  .cxp {
+    background-color: hsla(359, 68%, 71%, var(--transparency))
+  }
+
+  .stock {
+    background-color: rgb(131, 138, 231, var(--transparency))
+  }
+
+  @media (width <= 720px) {
+    .dashboard-grid {
+      grid-template-columns: repeat(4, 1fr);
+
+      & .cxp {
+        grid-column: 3 / span 2;
+      }
+
+      & .stock {
+        grid-column: 2 / span 2;
+      }
+    }
+  }
+
+  @media (width <= 520px) {
+    .dashboard-grid {
+      display: flex;
+      flex-direction: column;
+
+      & > div {
+        padding: 1em;
+        font-size: .8em;
+      }
+    }
+  }
+ 
+</style>
+
+<style is:global>
+  .dashboard-grid svg {
+    width: 70px;
+    fill: currentColor;
+    opacity: .7;
+  }
+
+  @media (width <= 520px) {
+    .dashboard-grid svg {
+      width: 50px;
+    }
+  }
+</style>
