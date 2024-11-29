@@ -176,7 +176,6 @@ const theme = Astro.cookies.get('theme')?.value || 'system'
 		scrollbar-color: var(--scroll) transparent;
 		scrollbar-width: thin;
 		scroll-behavior: smooth;
-		scrollbar-gutter: stable;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -185,6 +184,7 @@ const theme = Astro.cookies.get('theme')?.value || 'system'
 	
 	html:has(.no-scroll) {
 		overflow-y: hidden;
+		scrollbar-gutter: stable
 	}
 
 	body {

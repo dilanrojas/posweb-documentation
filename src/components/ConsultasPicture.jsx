@@ -16,7 +16,7 @@ export default function ConsultasPicture({ imgSrc, imgAlt }) {
   return (
     <>
       <picture
-        className={`consultas-picture ${isZoomed ? 'modal' : ''}`}
+        className={`consultas-picture ${isZoomed ? 'modal no-scroll' : ''}`}
         onClick={handleClick}
       >
         <img
