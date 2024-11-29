@@ -176,6 +176,7 @@ const theme = Astro.cookies.get('theme')?.value || 'system'
 		scrollbar-color: var(--scroll) transparent;
 		scrollbar-width: thin;
 		scroll-behavior: smooth;
+		scrollbar-gutter: stable;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -283,8 +284,8 @@ const theme = Astro.cookies.get('theme')?.value || 'system'
 	.doc-search-wrapper.open {
 		display: flex;
 		opacity: 1;
-		transition: opacity .12s ease-in-out;
 
+		transition: opacity .12s ease-in-out;
 		@starting-style { opacity: 0 }
 	}
 
@@ -375,6 +376,7 @@ const theme = Astro.cookies.get('theme')?.value || 'system'
 		gap: .8em;
 		padding: .5em 1.4em;
 		border-radius: 10px;
+		transition: background-color .1s ease-in-out, color .1s ease-in-out
 	}
 
 	.result-item:hover {
